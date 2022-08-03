@@ -4,10 +4,26 @@
 include "head.php";
 // Information received from server side when loading page
 $category = $data[1];
+$username = $data[2];
 ?>
 <body>
 <!--<><><><><> header <><><><><>-->
-
+<header>
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-4">
+            <div class="user-info">
+                <div class="row">
+                    <div class="col-4">
+                        <button class="sign-out-user"><i class="fas fa-sign-out-alt"></i></button>
+                    </div>
+                    <div class="col-8 d-flex align-items-center">
+                        <?=$username?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 <!-- <><><><><>  select section <><><><><> -->
 <section class="main-sec">
     <div class="main-side col-md-4">
@@ -31,9 +47,9 @@ $category = $data[1];
             <div class="col-12 d-flex ">
 
                 <div class="counter">
-                    <button class="increase"><i class="fas fa-plus"></i></button>
-                    <input type="number" class="num" value="<?= $category[0]['number'] ?>">
                     <button class="decrease"><i class="fas fa-minus"></i></button>
+                    <input type="number" class="num" value="<?= $category[0]['number'] ?>">
+                    <button class="increase"><i class="fas fa-plus"></i></button>
                 </div>
             </div>
         </div>

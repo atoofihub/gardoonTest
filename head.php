@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="public/css/media.css">
     <link rel="stylesheet" href="public/fontawesome-pro/css/fontawesome.min.css">
     <link rel="stylesheet" href="public/fontawesome-pro/css/all.min.css">
+    <?= $data[0] ?>
 </head>
 
 <!-- end header -->

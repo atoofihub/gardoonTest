@@ -10,8 +10,18 @@ class index extends Controller
 
     function index()
     {
-        $data[1] = $this->model->select_category();
-        $this->viwe('index/index', $data);
+        Model::sessionInit();
+        $user['userId'] = Model::sessionGet('userId');
+        $user['Username'] = model::sessionGet('Username');
+        if (empty($user['userId'])){
+            header('location:' . URL . 'login/index');
+        }else{
+            $data[0] = '';
+            $data[1] = $this->model->select_category();
+            $data[2] = $user['Username'];
+            $this->viwe('index/index', $data);
+        }
+
     }
 
     function category()

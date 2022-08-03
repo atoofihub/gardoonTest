@@ -1,3 +1,7 @@
+
+function go2NewUrl(newUrl, sec) {
+    setTimeout("location.href='" + newUrl + "'", sec * 1000);
+}
 $(function () {
     /* Changed category review */
     $("#categoryBox").selectbox({
@@ -51,5 +55,9 @@ $(document).ready(function () {
             let response = JSON.parse(data);
             console.log(response)
         });
+    });
+    $('.sign-out-user').click(function () {
+        console.log('ok');
+        go2NewUrl('login/logOut',0);
     });
 });
