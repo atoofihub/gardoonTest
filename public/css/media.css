@@ -1,0 +1,29 @@
+@media only screen and (min-width: 1200px) {
+    section.main-sec div.main-side h1.page-title {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    section.main-sec div.main-side h1.page-title {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    section.main-sec div.main-side h1.page-title {
+        font-size: 23px;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    section.main-sec div.main-side h1.page-title {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    section.main-sec div.main-side h1.page-title {
+        font-size: 20px;
+    }
+}
